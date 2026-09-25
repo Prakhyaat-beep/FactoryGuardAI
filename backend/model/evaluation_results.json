@@ -1,0 +1,121 @@
+{
+  "dataset": "AI4I 2020 Predictive Maintenance Dataset (supplied CSV when available)",
+  "target": "Machine failure",
+  "features": [
+    "Air temperature [K]",
+    "Process temperature [K]",
+    "Rotational speed [rpm]",
+    "Torque [Nm]",
+    "Tool wear [min]",
+    "Type"
+  ],
+  "random_state": 42,
+  "test_size": 0.2,
+  "train_rows": 8000,
+  "test_rows": 2000,
+  "failure_rate": 0.0339,
+  "selection_metric": "f1_score for machine failure class (1)",
+  "selected_model": "gradient_boosting",
+  "models": {
+    "logistic_regression": {
+      "accuracy": 0.8245,
+      "precision": 0.1418,
+      "recall": 0.8235,
+      "f1_score": 0.2419,
+      "roc_auc": 0.907,
+      "confusion_matrix": [
+        [
+          1593,
+          339
+        ],
+        [
+          12,
+          56
+        ]
+      ],
+      "inference_time_ms": 3.59,
+      "inference_time_per_record_ms": 0.001795,
+      "training_time_seconds": 0.028
+    },
+    "decision_tree": {
+      "accuracy": 0.9795,
+      "precision": 0.7015,
+      "recall": 0.6912,
+      "f1_score": 0.6963,
+      "roc_auc": 0.8419,
+      "confusion_matrix": [
+        [
+          1912,
+          20
+        ],
+        [
+          21,
+          47
+        ]
+      ],
+      "inference_time_ms": 3.951,
+      "inference_time_per_record_ms": 0.001975,
+      "training_time_seconds": 0.0235
+    },
+    "random_forest": {
+      "accuracy": 0.9795,
+      "precision": 0.7213,
+      "recall": 0.6471,
+      "f1_score": 0.6822,
+      "roc_auc": 0.9612,
+      "confusion_matrix": [
+        [
+          1915,
+          17
+        ],
+        [
+          24,
+          44
+        ]
+      ],
+      "inference_time_ms": 27.461,
+      "inference_time_per_record_ms": 0.013731,
+      "training_time_seconds": 0.6451
+    },
+    "svm": {
+      "accuracy": 0.9175,
+      "precision": 0.2785,
+      "recall": 0.8971,
+      "f1_score": 0.4251,
+      "roc_auc": 0.9655,
+      "confusion_matrix": [
+        [
+          1774,
+          158
+        ],
+        [
+          7,
+          61
+        ]
+      ],
+      "inference_time_ms": 130.571,
+      "inference_time_per_record_ms": 0.065285,
+      "training_time_seconds": 1.6741
+    },
+    "gradient_boosting": {
+      "accuracy": 0.9855,
+      "precision": 0.8824,
+      "recall": 0.6618,
+      "f1_score": 0.7563,
+      "roc_auc": 0.9697,
+      "confusion_matrix": [
+        [
+          1926,
+          6
+        ],
+        [
+          23,
+          45
+        ]
+      ],
+      "inference_time_ms": 4.617,
+      "inference_time_per_record_ms": 0.002308,
+      "training_time_seconds": 0.5649
+    }
+  }
+}
